@@ -1,47 +1,344 @@
----
-# Page meta info, like heading, footer text and nav links
+ appConfig:
+  theme: adventure-basic
+  layout: auto
+  iconSize: large
+  language: en
+  auth:
+    users:
+      - user: me
+        hash: 10d877cf189dc3b9e2e152370c7022543ad9213222f2fedb344dccaf135eb327
+        type: admin
+    enableGuestAccess: false
+    enableKeycloak: false
+  startingView: default
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  statusCheckInterval: 0
+  faviconApi: allesedv
+  routingMode: history
+  enableMultiTasking: false
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: false
+    searchEngine: google
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: false
+  hideComponents:
+    hideHeading: false
+    hideNav: false
+    hideSearch: false
+    hideSettings: true
+    hideFooter: false
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false
+  customCss: >
+    .rss-wrapper .meta-container{display:none !important} .rss-wrapper
+    .post-body{display:none !important} .rss-wrapper
+    .continue-reading-btn{display:none !important} .rss-wrapper
+    .post-title-wrap{display:flex;overflow:hidden} .rss-wrapper
+    .post-title{order:2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .rss-wrapper .post-date{order:1;white-space:nowrap}
 pageInfo:
   title: Dashy
   description: Welcome to your new dashboard!
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
-appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+      target: newtab
+    - title: Documentation
+      path: https://dashy.to/docs
+      target: newtab
+  footerText: ''
+  logo: >-
+    https://camo.githubusercontent.com/6c0964f4604a6807c263c83fff293258a908bdff7587910976d11c4e67a589bb/68747470733a2f2f692e6962622e636f2f796862743643592f64617368792e706e67
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: Getting Started
+    icon: fa fa-rocket
+    items:
+      - title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+        id: 0_1481_dashylive
+      - title: GitHub
+        description: Source Code, Issues and Pull Requests
+        url: https://github.com/lissy93/dashy
+        icon: favicon
+        id: 1_1481_github
+      - title: Docs
+        description: Configuring & Usage Documentation
+        provider: Dashy.to
+        icon: far fa-book
+        url: https://dashy.to/docs
+        id: 2_1481_docs
+      - title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+        id: 3_1481_showcase
+      - title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+        id: 4_1481_configguide
+      - title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+        id: 5_1481_support
+    displayData:
+      sortBy: most-used
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Financial Hacking
+    icon: fa fa-money
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: xStation
+        icon: >-
+          https://play-lh.googleusercontent.com/pkk17xXx2diP70k4AEC7OnUq5u3bAu3MRYcfnAyEw1hNZ4NmgNA3VbAHOPnmnU9J_A
+        url: https://xstation5.xtb.com/?branch=pl#/_/login
+        target: newtab
+        id: 0_1626_xstation
+      - title: InteractiveBrokers
+        icon: https://avatars.githubusercontent.com/u/3532868
+        url: https://www.interactivebrokers.co.uk/sso/Login?RL=1&locale=en_US
+        target: newtab
+        id: 1_1626_interactivebrokers
+      - title: Alior Bank
+        icon: >-
+          https://pbs.twimg.com/profile_images/587589636014354433/sncPN7BT_400x400.png
+        url: https://system.aliorbank.pl/sign-in
+        target: newtab
+        id: 2_1626_aliorbank
+      - title: Certyfikaty
+        icon: >-
+          https://upload.wikimedia.org/wikipedia/de/thumb/e/eb/Raiffeisen_%C3%96sterreich_logo.svg/1200px-Raiffeisen_%C3%96sterreich_logo.svg.png
+        url: https://www.rcb.at/pl/certyfikaty/prod-dzwigniowe/
+        id: 3_1626_certyfikaty
+      - title: Dywidendy
+        icon: fa fa-calendar
+        url: https://inwestycje-gieldowe.pl/dywidenda-tabelka/2022.html
+        target: newtab
+        id: 4_1626_dywidendy
+      - title: Stooq
+        icon: https://static.stooq.pl/stooq.png
+        url: https://stooq.pl/
+        target: newtab
+        id: 5_1626_stooq
+      - title: MT5 Dashboard
+        icon: https://the5ers.com/wp-content/uploads/2021/12/mt5-icon.png
+        url: http://62.171.148.99/dashboard.php
+        target: newtab
+        id: 6_1626_mtdashboard
+  - name: Hosting
+    icon: fa fa-server
+    displayData:
+      sortBy: most-used
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: PythonEnywhere
+        icon: >-
+          https://www.saashub.com/images/app/service_logos/8/e7d17f1df535/large.png
+        url: https://eu.pythonanywhere.com/login/
+        id: 0_732_pythonenywhere
+      - title: Contabo
+        icon: >-
+          https://media-exp1.licdn.com/dms/image/C4D0BAQH4hMIBGFZRWQ/company-logo_200_200/0/1610458749466?e=2147483647&v=beta&t=1P_L29A7xz9GwH1CNRai-lBZdeg3tr3rlZ6WIBa-a3Q
+        url: https://my.contabo.com/
+        id: 1_732_contabo
+      - title: DreamHost
+        icon: >-
+          https://toppng.com/uploads/preview/dreamhost-dreamhost-is-a-company-which-provides-web-115688905565caygn4vp2.png
+        url: https://panel.dreamhost.com/
+        id: 2_732_dreamhost
+      - title: Hetzner
+        icon: https://avatars.githubusercontent.com/u/30047064
+        url: https://accounts.hetzner.com/login
+        id: 3_732_hetzner
+      - title: Linode
+        icon: https://www.linode.com/wp-content/uploads/2021/01/linode-logo.svg
+        url: https://login.linode.com/login
+        id: 4_732_linode
+      - title: Vultr
+        icon: https://www.vultr.com/favicon/android-chrome-512x512.png
+        url: https://my.vultr.com/
+        id: 5_732_vultr
+  - name: Traffiqua
+    icon: https://traffiqua.pl/img/trfq_logo.png
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Fakturowanie
+        icon: >-
+          https://fs.siteor.com/radgost/files/logo-vector/fakturownia-logo-light.svg
+        url: https://traffiqua.fakturownia.pl/login
+        id: 0_931_fakturowanie
+      - title: Saldeo
+        icon: https://saldeo.brainshare.pl/static/images/logo/logo_big_w.png
+        url: https://saldeo.brainshare.pl/login.jsf
+        id: 1_931_saldeo
+      - title: Ad Manager
+        icon: https://www.gstatic.com/admanager/ad_manager.ico
+        url: https://admanager.google.com/11952858?authuser=0
+        target: newtab
+        id: 2_931_admanager
+      - title: Panel YB
+        icon: https://yieldbird.com/favicon.ico
+        url: https://panel.yieldbird.com/en/users/sign_in
+        id: 3_931_panelyb
+  - name: Tools
+    displayData:
+      sortBy: most-used
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: List of Awesome Icons
+        icon: https://fontawesome.com/favicon.ico
+        url: https://fontawesome.com/v4/icons/
+        id: 0_529_listofawesomeicons
+  - name: Stooq
+    icon: fa fa-line-chart
+    widgets:
+      - type: embed
+        options:
+          html: >
+            <div
+            style="display:flex;flex-wrap:wrap;justify-content:space-evenly;row-gap:1em">
+              <img src="https://stooq.com/c/?s=^spx&p" />
+              <img src="https://stooq.com/c/?s=^dax&p" />
+              <img src="https://stooq.com/c/?s=eurpln&p" />
+              <img src="https://stooq.com/c/?s=usdpln&p" />
+            </div>
+        updateInterval: 60
+        id: 0_534_embed
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: XTB (delayed 15m)
+    icon: fa fa-line-chart
+    widgets:
+      - type: embed
+        options:
+          html: >
+            <img src="https://stooq.com/c/?s=xtb&c=1d&t=b&a=lg"
+            style="width:100%" alt="Chart" />
+        updateInterval: 60
+        id: 0_1322_embed
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: WIG20 (live)
+    icon: fa fa-line-chart
+    widgets:
+      - type: embed
+        options:
+          html: >
+            <img src="https://stooq.com/c/?s=fw20m2220&c=1d&a=lg"
+            style="width:100%" alt="Chart" />
+        updateInterval: 60
+        id: 0_874_embed
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Stooq News
+    icon: fa fa-newspaper
+    widgets:
+      - type: rss-feed
+        options:
+          rssUrl: https://static.stooq.pl/rss/pl/b.rss
+          apiKey: mttokzmqpr4ji0ewd9uoubwja7yq52twehmr8rya
+          limit: 10
+        updateInterval: 60
+        id: 0_979_rssfeed
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Public IP
+    widgets:
+      - type: public-ip
+        useProxy: true
+        options:
+          provider: ipapi.co
+        id: 0_792_publicip
+  - name: Domiporta Mokotów
+    icon: fa fa-home
+    widgets:
+      - type: iframe
+        options:
+          url: https://dash.czarnecki.org/widgets/domiporta_mokotow.html
+        id: 0_1859_iframe
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+  - name: Otodom Mokotów
+    icon: fa fa-home
+    widgets:
+      - type: iframe
+        options:
+          url: https://dash.czarnecki.org/widgets/otodom_mokotow.html
+        id: 0_1542_iframe
+    displayData:
+      sortBy: default
+      rows: 3
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+  - name: Morizon Mokotów
+    icon: fa fa-home
+    widgets:
+      - type: iframe
+        options:
+          url: https://dash.czarnecki.org/widgets/morizon_mokotow.html
+        id: 0_1666_iframe
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 2
+      collapsed: false
+      hideForGuests: false
+    items: []
