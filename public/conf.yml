@@ -323,8 +323,8 @@ sections:
         id: 0_1542_iframe
     displayData:
       sortBy: default
-      rows: 3
-      cols: 1
+      rows: 1
+      cols: 2
       collapsed: false
       hideForGuests: false
     items: []
